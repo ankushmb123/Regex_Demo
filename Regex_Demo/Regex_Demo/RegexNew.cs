@@ -38,12 +38,42 @@ namespace Regex_Demo
             string firstname = "^[A-Z]{1}[a-z]{3,}?";
             if (Regex.IsMatch(name, firstname))
             {
-                Console.WriteLine("String matches the pattern");
+                Console.WriteLine("First Name is valid");
             }
             else
             {
-                Console.WriteLine("string Doesn't matches the pattern");
+                Console.WriteLine("First Name is INVALID");
+            }
+        }
+        public void Last_NameValidate()
+        {
+            Console.WriteLine("Enter the last name");
+            string name = Console.ReadLine();
+            string lastname = "^[A-Z]{1}[a-z]{3,}?";
+            if (Regex.IsMatch(name, lastname))
+            {
+                Console.WriteLine("Last name is Vaild");
+            }
+            else
+            {
+                Console.WriteLine("Last Name is INVALID");
+            }
+        }
+        public void PhoneNumber()
+        {
+            Console.WriteLine("Enter the mobile number");
+            string phone = Console.ReadLine();
+            //string number = "^[0-9]{2}( ){1}[0-9]{10}$";
+            string number = "^[0-9]{2}[ ][7-9]{1}[0-9]{9}$";
+            if (Regex.IsMatch(phone, number))
+            {
+                Console.WriteLine("Phone Number Matches the Pattern");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Phone Number");
             }
         }
     }
 }
+

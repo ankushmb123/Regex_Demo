@@ -15,16 +15,48 @@ namespace Regex_Demo
                 static void Main(string[] args)
                 {
                     Regex_Display regexDisplay = new Regex_Display();
-                    regexDisplay.Display();
-                    regexDisplay.NameValidate();
-                    regexDisplay.Last_NameValidate();
-                    Console.ReadLine();
 
+                    while (true)
+                    {
+                        Console.WriteLine("*****************");
+                        Console.WriteLine("1-Regex");
+                        Console.WriteLine("2-Validate first name");
+                        Console.WriteLine("3-Validate last name");
+                        Console.WriteLine("4-Phone Number");
+                        Console.WriteLine("*****************");
+                        Console.WriteLine("Choose the Above options");
+                        int option = Convert.ToInt32(Console.ReadLine());
+                        switch (option)
+                        {
+                            case 1:
+                                regexDisplay.Display();
+                                Console.WriteLine("*****************");
+                                break;
+                            case 2:
+                                regexDisplay.NameValidate();
+                                Console.WriteLine("*****************");
+                                break;
+                            case 3:
+                                regexDisplay.Last_NameValidate();
+                                Console.WriteLine("*****************");
+                                break;
+                            case 4:
+                                regexDisplay.PhoneNumber();
+                                Console.WriteLine("*****************");
+                                break;
+
+                            default:
+                                Console.WriteLine("Invalid option");
+                                break;
+
+                        }
+
+                    }
                 }
             }
-
         }
     }
 }
+
 
 
